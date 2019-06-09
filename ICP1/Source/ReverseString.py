@@ -7,4 +7,4 @@ while True:
         print(res)
         break
     else:
-        print("A string can not be be null")
+        print("A string can not be null")
