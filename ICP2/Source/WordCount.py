@@ -8,8 +8,9 @@ Str1 = file1.readlines()
 Str2 = " "
 for N in Str1:
     Str2 += N
-# merging each sring in array
+# merging each string in array
 str3 = " "
+
 
 def word_count(str):  # defining a word counter function
     counts = dict()  # assigning a duplicate dictionary using dict function
@@ -21,14 +22,12 @@ def word_count(str):  # defining a word counter function
             counts[word] = 1
     return counts  # returns the updated counter which is of dictionary type
 
+
 res = word_count(Str2)  # calling the word counter function
 print(res)  # printing the resultant count of the words
-res = json.dumps(res)   # converting dictionary object into string to save in the file
-for i in res:
-    str3 += res
-# merging each string in the array
+res = json.dumps(res)  # converting dictionary object into string to save in the file
 file2 = open("InputFile.txt", "a")
 # opening the same input file to append the resultant data
-file2.write(str3)
+file2.write(res)
 # writing the resultant data
 print(file2)
