@@ -27,7 +27,6 @@ class Employee:
         Employee.EmpTotalSal += Sal
 
 
-
 class FullTimeEmployee(Employee):
     # Defining the Child or Derived Class
     EmpId = 0
@@ -49,13 +48,14 @@ class FullTimeEmployee(Employee):
               f" Salary: {Fore.BLUE + Style.BRIGHT} %s {Style.RESET_ALL} \n"
               f" Phone: {Fore.BLUE + Style.BRIGHT} %s {Style.RESET_ALL} \n"
               f"" % (
-              self.EmpId, self.EmpFirstName, self.EmpLastName, self.EmpDep, self.EmpEmail, self.EmpSal, self.EmpCntct))
+                  self.EmpId, self.EmpFirstName, self.EmpLastName, self.EmpDep, self.EmpEmail, self.EmpSal,
+                  self.EmpCntct))
 
     def getaverageSal(self):
         # Defining a function to calculate the average salary of all the employee
         avgSal = self.EmpTotalSal / self.EmpCount
-        print(f"Avereage salary of all employees: {Fore.RED + Style.BRIGHT}%d{Style.RESET_ALL}"%(avgSal))
-        print(f"Total Number of employees: {Fore.RED + Style.BRIGHT}%d{Style.RESET_ALL}"%(self.EmpCount))
+        print(f"Avereage salary of all employees: {Fore.RED + Style.BRIGHT}%d{Style.RESET_ALL}" % (avgSal))
+        print(f"Total Number of employees: {Fore.RED + Style.BRIGHT}%d{Style.RESET_ALL}" % (self.EmpCount))
 
 
 print(f"Employee Class Output {Fore.CYAN + Style.DIM}(Parent Class){Style.RESET_ALL}:")
@@ -63,9 +63,9 @@ emp1 = Employee("Sampath", "Raigri", "Development", "sai@gmail.com", 20000, 7893
 # Creating first employee instance by assigning values
 emp2 = Employee("Kiran", "kura", "Testing", "kura@gmail.com ", 15000, 9014136052)
 # Creating second employee instance by assigning values
-print(f"Employee 1: {Fore.GREEN + Style.BRIGHT}%s %s{Style.RESET_ALL}"%(emp1.EmpFirstName,emp1.EmpLastName))
+print(f"Employee 1: {Fore.GREEN + Style.BRIGHT}%s %s{Style.RESET_ALL}" % (emp1.EmpFirstName, emp1.EmpLastName))
 # Printing details of first employee by calling the members of the Base class using Instance variable
-print(f"Employee 2: {Fore.GREEN + Style.BRIGHT}%s %s{Style.RESET_ALL}"%(emp2.EmpFirstName,emp2.EmpLastName),"\n")
+print(f"Employee 2: {Fore.GREEN + Style.BRIGHT}%s %s{Style.RESET_ALL}" % (emp2.EmpFirstName, emp2.EmpLastName), "\n")
 # Printing details of first employee by calling the members of the Base class using Instance variable
 
 
